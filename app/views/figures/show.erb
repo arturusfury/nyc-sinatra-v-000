@@ -1,17 +1,18 @@
 <div class="starter-template">
-  <h1><%= @landmark.name %></h1>
-  <p class="lead">Construction was completed in <%= @landmark.year_completed %></p>
+  <h1><%= @figure.name %></h1>
   <br />
+  <% @figure.landmarks.each do |landmark| %>
+  <p class="lead"><%= landmark.name %></p>
+  <% end %>
   <div class='row'>
     <div class="col-xl-offset-4 col-xs-2">
-      <a href="/landmarks/<%=@landmark.id%>/edit" class="btn btn-primary btn-block btn-sm" role="button">Edit</a>
+      <a href="/figures/<%=@figure.id%>/edit" class="btn btn-primary btn-block btn-sm" role="button">Edit</a>
     </div>
     <div class="col-xs-2">
-      <form method="post" action="/landmarks/<%=@landmark.id%>/delete">
+      <form method="post" action="/figures/<%=@figure.id%>/delete">
         <input id="hidden" type="hidden" name="_method" value="delete">
         <button type="submit" class="btn btn-danger btn-sm btn-block">Delete</button>
       </form>
-
     </div>
   </div>
 </div>

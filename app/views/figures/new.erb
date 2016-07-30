@@ -1,0 +1,62 @@
+<div class="starter-template">
+  <form method="post" action="/figures">
+    <div class="form-group row">
+      <h3>Enter an Figure name</h3>
+    </div>
+    <div class="form-group row">
+      <div class="col-xs-offset-4 col-xs-4">
+        <input class="form-control" type="text" name="figure[name]" placeholder="ex: Jane Doe" id="figure_name">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <h3>Enter an Title</h3>
+    </div>
+    <div class="form-group row">
+      <div class="col-xs-offset-4 col-xs-4">
+        <input class="form-control" type="text" name="title[name]" placeholder="ex: The Mayor" id="new_title">
+      </div>
+    </div>
+    <div class="form-group row">
+      <h3>Or Select One Below</h3>
+    </div>
+    <div class="form-group row">
+      <% @titles.each do |title| %>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="figure[title_ids][]" value="<%= title.id %>" name="<%= title.id %>" id="title_<%= title.id %>">
+          <%= title.name %>
+        </label>
+      </div>
+      <% end %>
+    </div>
+
+    <div class="form-group row">
+      <h3>Enter a Landmark name</h3>
+    </div>
+    <div class="form-group row">
+      <div class="col-xs-offset-4 col-xs-4">
+        <input class="form-control" type="text" name="landmark[name]" placeholder="ex: St. Louis Arch" id="new_landmark">
+      </div>
+    </div>
+    <div class="form-group row">
+      <h3>Or Select One Below</h3>
+    </div>
+    <div class="form-group row">
+      <% @landmarks.each do |landmark| %>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="figure[landmark_ids][]" value="<%= landmark.id %>" name="<%= landmark.id %>" id="landmark_<%= landmark.id %>">
+          <%= landmark.name %>
+        </label>
+      </div>
+      <% end %>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-xs-offset-4 col-xs-4">
+        <button type="submit" class="btn btn-primary btn-block">Create New Figure</button>
+      </div>
+    </div>
+  </form>
+</div>

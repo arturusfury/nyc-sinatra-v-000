@@ -1,37 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <!--
-     Frank Sinatra
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
 
-  "The old crooner himself:"
-       QB"   .  . ....^FBQQBQBQ
-       #^   ..../,, ,/yyBQBDBt`"B
-     B"  ._L_yQ&Qy&&QQBQQDlL;S; (Q
-    B^   /DQQQBQQQQQQBQBDQQD1:   "B
-   Q~   ,GQBDQDQQQQQQBBQQDQ&EC    7B
-   D    lQQQQQBQBQQQQQQQQBBID('    {
-   E   .iDDBQQBQQQQBBBQBQQDQ1!:    (
-   3   .(BQBBQBBQQQQBBQBBBDBS'     }                     I'm
-   Q   '~~<MMBQQBBQBP"""<BD1EL.    Q                   dreaming
-   Q    LuL `7QBBB?../LL;.!JDL     Q                    of a
-  "  ,  ,__&L.DBBEEL1L_,'EylEE!  ,U                     white
-  1 :s&yyQQQ6-DQBBQ&QQQQQQQQJY!  lyB1Q                Christmas.
-  S  ?DDQQBD'.QQBDQDBQBQQQDD1<  LIQDG
-  Q   j8BQE2 LQQBE9EBBEBQQES{! /BQSE
-   Q_ 'TS7L  <#P~^,G1?TXC3({!  3PEy
-    Q, ,_>'.,___yBD1DU;,'('''  yQ
-     L "Qy,  'IIIZl',L/&;!;:  LQ
-     Q; FD(  (`IE2L/QDB&lY!   6Q
-      Q, (/. `!?"21iQDU&/~   L FB
-       Q_ (EL/&&QDBQBDJ"   ,y^  `FB
-        Qy 75EEBBQESf`   _yB^      "M
-        Q7  `'^""~`   _yQQM'         `"FQ
-        F;         _yQQQQF              Q
-  -->
+    <title>Landmarks</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="http://v4-alpha.getbootstrap.com/examples/starter-template/starter-template.css">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <%= yield %>
-  </body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <a class="navbar-brand" href="#">Landmarks</a>
+      <ul class="nav nav-pills">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/figures">Figures</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/landmarks">Landmarks</a>
+        </li>
+      </ul>
+    </nav>
 
+    <div class="container">
+      <%= yield %>
+    </div><!-- /.container -->
+
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+  </body>
 </html>

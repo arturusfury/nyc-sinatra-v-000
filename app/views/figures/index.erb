@@ -1,0 +1,11 @@
+      <div class="starter-template">
+        <h1>List of Figures</h1>
+        <% @figures.each do |figure| %>
+        <p class="lead"><a href="/figures/<%=figure.id%>"><%= figure.name %></a></p>
+        <% end %>
+        <div class="form-group row">
+          <div class="col-xs-offset-4 col-xs-4">
+            <a href="/figures/new" class="btn btn-primary btn-block btn-sm" role="button">Create</a>
+          </div>
+        </div>
+      </div>
